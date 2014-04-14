@@ -18,5 +18,5 @@ if [ -f $LOCAL_VIMRC ]; then
 	fi
 fi
 
-$CURL $REMOTE_VIMRC > $_LOCAL_VIMRC
+$CURL $REMOTE_VIMRC > $LOCAL_VIMRC
 echo ">> updated file $LOCAL_VIMRC"
