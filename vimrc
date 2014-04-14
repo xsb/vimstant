@@ -1,0 +1,20 @@
+set nocompatible
+filetype indent plugin on
+syntax on
+set number
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set backspace=indent,eol,start
+set autoindent
+set confirm
+set tabstop=4
+set shiftwidth=4
+set noswapfile
+set nobackup
+set showcmd
+set showmode
+set visualbell
+set t_vb=
+set mouse=a
