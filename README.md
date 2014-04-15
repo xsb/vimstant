@@ -33,7 +33,7 @@ Q: Why do you need an installer? It's simpler to curl the vimrc itself and redir
 A: Yes. But Vimstant script backups your current vim configuration, and will do more nice things in the future.
 
 Q: But "curl pipe sh" installers are dangerous!  
-A: Do `curl -s url` the first time, read the code, then pipe to a shell.
+A: Do `curl -s url` the first time, read the code, then pipe to a shell. The installer is tiny and easy to read.
 
 Q: I want it to install my own vimrc file by default.  
 A: Fork.

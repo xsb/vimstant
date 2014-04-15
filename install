@@ -10,10 +10,10 @@ SENSIBLE="https://raw.githubusercontent.com/tpope/vim-sensible/master/plugin/sen
 # Show usage examples
 if [ ! -z $EXAMPLES ]; then
 	echo -e "
-# Get Arch Linux default vim config:
+>> Get Arch Linux default vim config:
 curl -s $INSTALLER | VIMRC_URL=$ARCHLINUX sh
 
-# Get Tim Pope's vim-sensible:
+>> Get Tim Pope's vim-sensible:
 curl -s $INSTALLER | VIMRC_URL=$SENSIBLE sh
 "
 	exit 0
