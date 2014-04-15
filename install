@@ -1,18 +1,28 @@
 #!/bin/sh
-#
-# To use another vimrc file, create an
-# environment variable before running this script:
-# $ export VIMRC_URL="<alternative_url>"
 
 VIMRC="$HOME/.vimrc"
 BACKUP="$HOME/.vimrc.bak"
+INSTALLER="https://raw.githubusercontent.com/xsb/vimstant/master/install"
+DEFAULT="https://raw.githubusercontent.com/xsb/vimstant/master/vimrc"
+ARCHLINUX="https://projects.archlinux.org/svntogit/packages.git/plain/trunk/archlinux.vim?h=packages/vim"
 
-# Check if VIMRC_URL is already specified
-if [ -z $VIMRC_URL ]; then
-	VIMRC_URL="https://raw.githubusercontent.com/xsb/vimstant/master/vimrc"
+# Show usae examples
+if [ ! -z $EXAMPLES ]; then
+	EXAMPLES_TEXT="
+* Get Arch Linux default vim config
+
+curl -s $INSTALLER | VIMRC_URL=$ARCHLINUX sh
+"
+	echo -e "$EXAMPLES_TEXT"
+	exit 0
 fi
 
-# Check if vim config file exists
+# Define default VIMRC_URL if not specified
+if [ -z $VIMRC_URL ]; then
+	VIMRC_URL=$DEFAULT
+fi
+
+# Backup vim config file if exists
 if [ -f $VIMRC ]; then
 	mv $VIMRC $BACKUP
 	echo ">> Saved $VIMRC as $BACKUP"
