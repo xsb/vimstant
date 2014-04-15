@@ -1,4 +1,4 @@
-# Vimstamp
+# Vimstant
 
 Everybody hates default Vim configurations. Have you ever tried to use
 Vim daily without configuring it? It's bad.
@@ -16,10 +16,10 @@ You only need a good basic Vim configuration and an easy way to use it.
 
 Install a basic .vimrc in your $HOME
 
-    curl -s https://raw.githubusercontent.com/xsb/vimstamp/master/install | sh
+    curl -s https://raw.githubusercontent.com/xsb/vimstant/master/install | sh
 
 Try another vimrc from the internet
 
     export VIMRC_URL="https://example.com/alternative/url/vimrc"
-    curl -s https://raw.githubusercontent.com/xsb/vimstamp/master/install | sh
+    curl -s https://raw.githubusercontent.com/xsb/vimstant/master/install | sh
 

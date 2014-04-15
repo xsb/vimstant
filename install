@@ -9,7 +9,7 @@ BACKUP="$HOME/.vimrc.bak"
 
 # Check if VIMRC_URL is already specified
 if [ -z $VIMRC_URL ]; then
-	VIMRC_URL="https://raw.githubusercontent.com/xsb/vimstamp/master/vimrc"
+	VIMRC_URL="https://raw.githubusercontent.com/xsb/vimstant/master/vimrc"
 fi
 
 # Check if vim config file exists
