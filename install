@@ -1,18 +1,23 @@
 #!/bin/sh
+#
+# To use another vimrc file, create an
+# environment variable before running this script:
+# $ export VIMRC_URL="<alternative_url>"
 
-VIMRC_URL="https://raw.github.com/xsb/vimstamp/master/vimrc"
 VIMRC="$HOME/.vimrc"
 BACKUP="$HOME/.vimrc.bak"
-CURL="$(which curl) -s"
-if [ $? -ne 0 ]; then
-	echo ">> curl command not found"
-	exit 1
+
+# Check if VIMRC_URL is already specified
+if [ -z $VIMRC_URL ]; then
+	VIMRC_URL="https://raw.githubusercontent.com/xsb/vimstamp/master/vimrc"
 fi
 
+# Check if vim config file exists
 if [ -f $VIMRC ]; then
 	mv $VIMRC $BACKUP
 	echo ">> Saved $VIMRC as $BACKUP"
 fi
 
-$CURL $VIMRC_URL > $VIMRC
+# Write vim config file
+curl -s $VIMRC_URL > $VIMRC
 echo ">> Updated $VIMRC"
