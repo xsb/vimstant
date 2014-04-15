@@ -18,6 +18,11 @@ Copy the default vimrc provided in `~/.vimrc`:
 
     curl -s https://raw.githubusercontent.com/xsb/vimstant/master/install | sh
 
+The same but without piping curl (aka the secure way):
+
+    wget https://raw.githubusercontent.com/xsb/vimstant/master/install -O vimstant.sh
+    sh vimstant.sh
+
 Or copy another HTTP available vimrc file
 
     curl -s https://raw.githubusercontent.com/xsb/vimstant/master/install | VIMRC_URL="<file_url>" sh
@@ -33,7 +38,7 @@ Q: Why do you need an installer? It's simpler to curl the vimrc itself and redir
 A: Yes. But Vimstant script backups your current vim configuration, and will do more nice things in the future.
 
 Q: But "curl pipe sh" installers are dangerous!  
-A: Do `curl -s url` the first time, read the code, then pipe to a shell. The installer is tiny and easy to read.
+A: Download the installer, check the content, execute it.
 
 Q: I want it to install my own vimrc file by default.  
 A: Fork.
