@@ -6,14 +6,12 @@ INSTALLER="https://raw.githubusercontent.com/xsb/vimstant/master/install"
 DEFAULT="https://raw.githubusercontent.com/xsb/vimstant/master/vimrc"
 ARCHLINUX="https://projects.archlinux.org/svntogit/packages.git/plain/trunk/archlinux.vim?h=packages/vim"
 
-# Show usae examples
+# Show usage examples
 if [ ! -z $EXAMPLES ]; then
-	EXAMPLES_TEXT="
-* Get Arch Linux default vim config
-
+	echo -e "
+>> Get Arch Linux default vim config:
 curl -s $INSTALLER | VIMRC_URL=$ARCHLINUX sh
 "
-	echo -e "$EXAMPLES_TEXT"
 	exit 0
 fi
 
