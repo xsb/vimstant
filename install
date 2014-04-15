@@ -5,12 +5,16 @@ BACKUP="$HOME/.vimrc.bak"
 INSTALLER="https://raw.githubusercontent.com/xsb/vimstant/master/install"
 DEFAULT="https://raw.githubusercontent.com/xsb/vimstant/master/vimrc"
 ARCHLINUX="https://projects.archlinux.org/svntogit/packages.git/plain/trunk/archlinux.vim?h=packages/vim"
+SENSIBLE="https://raw.githubusercontent.com/tpope/vim-sensible/master/plugin/sensible.vim"
 
 # Show usage examples
 if [ ! -z $EXAMPLES ]; then
 	echo -e "
->> Get Arch Linux default vim config:
+# Get Arch Linux default vim config:
 curl -s $INSTALLER | VIMRC_URL=$ARCHLINUX sh
+
+# Get Tim Pope's vim-sensible:
+curl -s $INSTALLER | VIMRC_URL=$SENSIBLE sh
 "
 	exit 0
 fi
